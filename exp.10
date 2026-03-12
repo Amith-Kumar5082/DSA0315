@@ -1,0 +1,14 @@
+sentence = ["The", "dog", "runs"]
+
+tags = ["NN", "NN", "NN"]
+
+for i in range(len(sentence)):
+    if sentence[i].lower() in ["the", "a", "an"]:
+        tags[i] = "DT"
+
+for i in range(len(sentence)):
+    if sentence[i].endswith("s"):
+        tags[i] = "VBZ"
+
+for word, tag in zip(sentence, tags):
+    print(word, "->", tag)
