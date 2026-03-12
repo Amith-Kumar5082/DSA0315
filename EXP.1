@@ -1,0 +1,12 @@
+import re
+
+text = "My email is test123@gmail.com and phone number is 9876543210"
+
+# match email
+email = re.search(r'\S+@\S+', text)
+
+# find phone number
+phone = re.search(r'\d{10}', text)
+
+print("Email:", email.group())
+print("Phone:", phone.group())
