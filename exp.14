@@ -1,0 +1,9 @@
+subjects = ["he", "she", "it"]
+verbs = ["runs", "eats"]
+
+sentence = input("Enter sentence: ").split()
+
+if sentence[0].lower() in subjects and sentence[1] in verbs:
+    print("Sentence agrees")
+else:
+    print("Agreement error")
