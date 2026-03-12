@@ -1,0 +1,14 @@
+import random
+
+tags = {
+    "I": ["PRON"],
+    "eat": ["VERB"],
+    "apple": ["NOUN"],
+    "a": ["DET"]
+}
+
+sentence = ["I", "eat", "a", "apple"]
+
+for word in sentence:
+    tag = random.choice(tags.get(word, ["NOUN"]))
+    print(word, "->", tag)
