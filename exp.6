@@ -1,0 +1,19 @@
+import random
+from nltk.util import bigrams
+
+text = "I love natural language processing and natural language learning"
+
+words = text.split()
+
+bg = list(bigrams(words))
+
+start = random.choice(words)
+sentence = [start]
+
+for i in range(5):
+    for w1, w2 in bg:
+        if sentence[-1] == w1:
+            sentence.append(w2)
+            break
+
+print("Generated Text:", " ".join(sentence))
